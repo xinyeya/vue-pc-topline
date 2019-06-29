@@ -69,6 +69,10 @@ export default {
 
   created () {
     this.loadUser()
+    console.log(this.user)
+    if (this.user.id) {
+      this.user.id = this.user.id.toSting()
+    }
   },
 
   methods: {
@@ -80,6 +84,8 @@ export default {
           url: `/user/profile`
         })
         this.user = data
+        this.user.id = data.id.c.join('')
+        // console.log(data)
       } catch (err) {
         console.log(err)
         this.$message.error('加载账户信息失败')
