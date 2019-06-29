@@ -6,6 +6,7 @@ import 'nprogress/nprogress.css'
 import axios from 'axios'
 import { getUser, removeUser } from '@/utils/auth'
 import JSONbig from 'json-bigint'
+import store from './store/index.js'
 
 // 先找文件，没有就找目录
 // 如果找到目录，优先加载目录中的 index
@@ -110,5 +111,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
