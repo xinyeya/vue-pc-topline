@@ -1,21 +1,17 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div>
+    <p>Home Component</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: 'AppHome',
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
 
 <style lang="less" scoped>
-#app {
-  height: 100%;
-}
 </style>
